@@ -38,7 +38,7 @@ var vittorieComputer = 0;
 
 btnDado.addEventListener('click',
     function() {
-        // Numero random per la carrozza da 1 a 6
+        // Numero random da 1 a 6
         var lancioDadoUser = Math.floor( Math.random() * 6) + 1;
         var lancioDadoComputer = Math.floor( Math.random() * 6) + 1;
 
