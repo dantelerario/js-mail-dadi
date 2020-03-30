@@ -16,14 +16,15 @@ for (var i = 0; i < emails.length; i++) {
 
   if (check == checkEmail) {
     emailFound = true;
-    console.log(emailFound);
   }
 }
 
 if (emailFound === true) {
-  console.log('Login done' + checkEmail + 'is connected');
+  console.log('Login done: ' + checkEmail + ' is connected!');
+  document.getElementById('result').innerHTML = 'Login done: ' + checkEmail + ' is connected!';
 } else {
-  console.log('Wrong email ' + checkEmail);
+  console.log('Wrong email: ' + checkEmail);
+  document.getElementById('result').innerHTML = 'Wrong Email: ' + checkEmail;
 }
 
 
