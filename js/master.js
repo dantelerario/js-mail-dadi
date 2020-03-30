@@ -31,3 +31,24 @@ if (emailFound === true) {
 // Gioco dei dadi
 // generare un numero random da 1  a 6, sia per il giocatore sia per il computer
 // Stabilire il vincitore, in base a chi fa il punteggio più alto
+
+// Generare il biglieto
+btnDado.addEventListener('click',
+    function() {
+        // Numero random per la carrozza da 1 a 6
+        var lancioDadoUser = Math.floor( Math.random() * 6) + 1;
+        var lancioDadoComputer = Math.floor( Math.random() * 6) + 1;
+
+        if (lancioDadoUser > lancioDadoComputer) {
+          document.getElementById('winner').innerHTML = 'Hai battuto il computer!!!';
+        } else if (lancioDadoUser < lancioDadoComputer) {
+          document.getElementById('winner').innerHTML = 'Hai perso!!!';
+        } else if (lancioDadoUser = lancioDadoComputer) {
+          document.getElementById('winner').innerHTML = 'Pareggio!';
+        }
+
+        // Risultato lancio dado
+        document.getElementById('userDado').innerHTML = 'Tu: ' + lancioDadoUser;
+        document.getElementById('computerDado').innerHTML = 'Computer: ' + lancioDadoComputer;
+    }
+);
