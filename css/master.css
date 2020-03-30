@@ -8,6 +8,8 @@
 body {
   height: 100vh;
   background: #517191;
+  background-image: url('https://www.voglioviverecosi.com/wp-content/uploads/2017/01/ater-Casino1-1920x1080.jpg');
+  background-position: cover;
   color: #fff;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
@@ -40,6 +42,7 @@ body {
 .box {
   display: flex;
   flex-direction: column;
+  background: rgba(51, 71, 91, 0.7);
   margin: 50px;
   padding: 20px;
   border: 1px solid #fff;
