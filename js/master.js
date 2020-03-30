@@ -32,7 +32,10 @@ if (emailFound === true) {
 // generare un numero random da 1  a 6, sia per il giocatore sia per il computer
 // Stabilire il vincitore, in base a chi fa il punteggio più alto
 
-// Generare il biglieto
+// Lancia il dado
+var vittorieUser = 0;
+var vittorieComputer = 0;
+
 btnDado.addEventListener('click',
     function() {
         // Numero random per la carrozza da 1 a 6
@@ -41,8 +44,10 @@ btnDado.addEventListener('click',
 
         if (lancioDadoUser > lancioDadoComputer) {
           document.getElementById('winner').innerHTML = 'Hai battuto il computer!!!';
+          vittorieUser++
         } else if (lancioDadoUser < lancioDadoComputer) {
           document.getElementById('winner').innerHTML = 'Hai perso!!!';
+          vittorieComputer++
         } else if (lancioDadoUser = lancioDadoComputer) {
           document.getElementById('winner').innerHTML = 'Pareggio!';
         }
@@ -50,5 +55,7 @@ btnDado.addEventListener('click',
         // Risultato lancio dado
         document.getElementById('userDado').innerHTML = 'Tu: ' + lancioDadoUser;
         document.getElementById('computerDado').innerHTML = 'Computer: ' + lancioDadoComputer;
+        document.getElementById('vittorieUser').innerHTML = 'Tuo Punteggio: ' + vittorieUser;
+        document.getElementById('vittorieComputer').innerHTML = 'Punteggio Computer: ' + vittorieComputer;
     }
 );
